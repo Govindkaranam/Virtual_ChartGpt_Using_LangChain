@@ -1,0 +1,8 @@
+The given code that performs web scraping and text processing tasks.
+The program first crawls a website (https://keras.io/api/) and collects all the URLs present on the website by parsing the HTML using the BeautifulSoup library. 
+It then writes the list of URLs to a text file named "keras.txt".
+The program then reads the contents of "keras.txt" and removes any URLs that point to PDF or Python files.
+It then reads the remaining URLs one by one and uses the langchain library to perform text processing tasks.
+The langchain library is used to load the web pages content and split them into smaller chunks of text. 
+Then the text is converted to embeddings using the HuggingFace library, and the embeddings are stored in a FAISS index. Finally, the program saves the FAISS index
+and the vectors store object to disk for further use.
